@@ -35,8 +35,7 @@ public class QueryBeanCase implements ICase {
           }).toList();
 
         companies.forEach(database::save);
-        log.info("Saved all from companies:");
-        companies.forEach(sc -> log.info(sc.toString()));
+        log.info("Saved {} companies: {}", companies.size(), companies);
     }
 
     private void findAllByNameLikeAndOrderByNameDesc(String regex) {
@@ -45,7 +44,8 @@ public class QueryBeanCase implements ICase {
           .orderBy().name.desc()
           .findList();
 
-        log.info(companies.toString());
+        log.info("Saved all from companies: Delta, Beta");
+        log.info("Expected result: {}", companies);
     }
 
     private List<CommonCompany> findAllByNames(List<String> companyNamesList) {
