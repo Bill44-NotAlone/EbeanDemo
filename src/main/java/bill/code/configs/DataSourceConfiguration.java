@@ -9,6 +9,7 @@ public class DataSourceConfiguration {
 
     public DataSourceConfiguration() {
         database = DB.getDefault();
+        new CreatorDataBase().initDdlDataBase(database);
     }
 
     public Database getDatabase() {

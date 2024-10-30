@@ -1,0 +1,6 @@
+datasource:
+  db:
+    username: sa
+    password: ""
+    url: jdbc:h2:mem:ebeanBd;
+    driver:	org.h2.Driver

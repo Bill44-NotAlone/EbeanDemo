@@ -1,16 +1,13 @@
 package bill.code.entites.company;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "company")
+@Table(name = "company", schema = "ebeanBd")
 public class CommonCompany {
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 

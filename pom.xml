@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>bill.code</groupId>
-    <artifactId>Uebean</artifactId>
+    <artifactId>EbeanDemo</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -17,14 +17,14 @@
     <dependencies>
         <dependency>
             <groupId>io.ebean</groupId>
-            <artifactId>ebean-postgres</artifactId>
-            <version>14.1.0</version>
+            <artifactId>ebean-h2</artifactId>
+            <version>15.8.0</version>
         </dependency>
 
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
-            <version>42.7.3</version>
+            <groupId>com.h2database</groupId>
+            <artifactId>h2</artifactId>
+            <version>2.3.232</version>
         </dependency>
 
         <dependency>
@@ -46,7 +46,7 @@
             <plugin> <!-- perform ebean enhancement -->
                 <groupId>io.ebean</groupId>
                 <artifactId>ebean-maven-plugin</artifactId>
-                <version>14.1.0</version>
+                <version>15.8.0</version>
                 <extensions>true</extensions>
             </plugin>
 
@@ -56,10 +56,10 @@
                 <version>3.10.1</version>
                 <configuration>
                     <annotationProcessorPaths>
-                        <path> <!-- generate ebean query beans -->
+                        <path>
                             <groupId>io.ebean</groupId>
                             <artifactId>querybean-generator</artifactId>
-                            <version>14.1.0</version>
+                            <version>15.8.0</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>

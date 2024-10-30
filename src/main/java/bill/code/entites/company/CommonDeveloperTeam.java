@@ -2,11 +2,12 @@ package bill.code.entites.company;
 
 import jakarta.persistence.*;
 
-@Table(name = "developmentteams")
 @Entity
+@Table(name = "developmentteams", schema = "ebeanBd")
 public class CommonDeveloperTeam {
 
-    @Id @GeneratedValue
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
     @Column(name = "CompanyId")
